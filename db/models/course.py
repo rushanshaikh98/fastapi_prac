@@ -72,5 +72,5 @@ class CompletedContentBlock(Timestamp, Base):
     feedback = Column(Text, nullable=True)
     grade = Column(Integer, default=0)
 
-    student = relationship(User, back_populates="student_courses")
+    student = relationship(User, back_populates="student_content_blocks")
     content_block = relationship("ContentBlock", back_populates="completed_content_blocks")
